@@ -1,0 +1,9 @@
+.app {
+  display: flex;          /* 👈 MANA SHU ASOSIY */
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  background: #f3f4f6;
+}

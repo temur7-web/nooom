@@ -1,0 +1,192 @@
+.post-page {
+  padding: 30px 40px;
+  background: #fff;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* TOP */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: #ececec;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.publish-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* TITLE */
+.title-input {
+  width: 100%;
+  border: none;
+  font-size: 42px;
+  font-weight: 700;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.toolbar button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  opacity: 0.7;
+}
+
+.toolbar .active {
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+/* ========================= */
+/* EDITOR.JS MAIN CONTAINER  */
+/* ========================= */
+
+.content-input {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Editor.js ichki qismi */
+.codex-editor {
+  padding: 0;
+}
+
+.codex-editor__redactor {
+  padding-bottom: 80px;
+}
+
+/* BLOCK */
+.ce-block__content {
+  max-width: 100%;
+}
+
+/* PARAGRAPH */
+.ce-paragraph {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PLACEHOLDER */
+.ce-paragraph[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: #aaa;
+}
+
+/* ========================= */
+/* TEXT FORMAT               */
+/* ========================= */
+
+.ce-paragraph strong {
+  font-weight: 800;
+}
+
+.ce-paragraph em {
+  font-style: italic;
+}
+
+.ce-paragraph u {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* LINK */
+.ce-paragraph a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
+
+.ce-header {
+  font-weight: 700;
+}
+
+.ce-header[data-level="1"] {
+  font-size: 32px;
+}
+
+.ce-header[data-level="2"] {
+  font-size: 26px;
+}
+
+.ce-header[data-level="3"] {
+  font-size: 22px;
+}
+
+/* ========================= */
+/* LIST                      */
+/* ========================= */
+
+.ce-list {
+  padding-left: 24px;
+}
+
+/* ========================= */
+/* CODE BLOCK                */
+/* ========================= */
+
+.ce-code {
+  background: #0f0f0f;
+  color: #00ff7f;
+  border-radius: 14px;
+  padding: 16px;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+/* ========================= */
+/* IMAGE                     */
+/* ========================= */
+
+.ce-block__content img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* ========================= */
+/* INLINE TOOLBAR            */
+/* ========================= */
+
+.ce-inline-toolbar {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ========================= */
+/* PLUS BUTTON (+)           */
+/* ========================= */
+
+.ce-toolbar__plus {
+  color: #000;
+}
