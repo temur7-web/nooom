@@ -17,21 +17,19 @@ function App() {
       <Header />
 
       <div className="content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+       <Routes>
+  <Route path="/" element={<Home />} />
+  {/* Yangi post uchun */}
+  <Route path="/contact" element={<Contact />} />
+  {/* Eskisini tahrirlash uchun ID bilan */}
+  <Route path="/contact/:id" element={<Contact />} />
 
-          {/* 🔥 ABOUT + ICHKI ROUTES */}
-         <Route path="/about" element={<About />}>
-  <Route index element={<Pub />} />
-  <Route path="pub" element={<Pub />} />
-  <Route path="draf" element={<Darf />} />
-  <Route path="schet" element={<Schet />} />
-
-</Route>
-  <Route path="contact" element={<Contact />} /> {/* 👈 SHU */}
-        </Routes>
-
+  <Route path="/about" element={<About />}>
+    <Route index element={<Pub />} />
+    <Route path="draf" element={<Darf />} />
+    <Route path="schet" element={<Schet />} />
+  </Route>
+</Routes>
         <Banner />
       </div>
     </div>

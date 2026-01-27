@@ -7,3 +7,29 @@
   flex: 1;
   background: #f3f4f6;
 }
+/* Layoutni moslashuvchan qilish */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f7f8;
+}
+
+/* Telefonlar uchun Sidebar behavior */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* Sidebar tepaga yoki pastga o'tadi */
+  }
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px 20px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #eee;
+  }
+  .menu {
+    flex-direction: row !important;
+    justify-content: space-around;
+  }
+  .routs { display: none; } /* Telefonda faqat ikonka qoladi */
+  .content { padding: 15px !important; }
+}
