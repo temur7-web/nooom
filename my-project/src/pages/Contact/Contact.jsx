@@ -114,7 +114,6 @@ function Contact() {
 
   return (
     <div className="post-layout">
-      {/* CHAP TOMON: EDITOR MAYDONI */}
       <div className="post-page">
         <button 
           className="back-btn" 
@@ -143,7 +142,6 @@ function Contact() {
         </div>
       </div>
 
-      {/* O'NG TOMON: SIDEBAR (SAQLASH VA SOZLAMALAR) */}
       <div className="editor-sidebar">
         <div className="publish-group">
           <div className="publish-wrapper">
@@ -165,7 +163,6 @@ function Contact() {
           <p className="rules">This post must follow the <span>Content Guidelines.</span></p>
         </div>
 
-        {/* SCHEDULE TANLANGANDA CHIQADIGAN OYNA */}
         {status === "scheduled" && (
           <div className="schedule-box animate-slide-down">
             <div className="schedule-input-wrapper">
