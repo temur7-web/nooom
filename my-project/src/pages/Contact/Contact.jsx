@@ -33,7 +33,6 @@ function Contact() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
 
-  // EditorJS sozlamalari
   useEffect(() => {
     if (!holderRef.current || editorRef.current) return;
     
@@ -71,7 +70,6 @@ function Contact() {
     };
   }, []);
 
-  // Postni saqlash mantiqi
   const savePost = async (exitAfterSave = false) => {
     if (!editorRef.current || !titleRef.current) return;
     
@@ -83,12 +81,11 @@ function Contact() {
       return;
     }
 
-    // Yangi post ob'ekti
     const post = {
       id: Date.now(),
       title,
       content,
-      status, // "published", "draft", "scheduled"
+      status, 
       visibility,
       schedule: status === "scheduled" ? { date: scheduleDate, time: scheduleTime } : null,
       createdAt: new Date().toISOString(),
