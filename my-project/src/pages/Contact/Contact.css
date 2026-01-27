@@ -76,7 +76,6 @@
   border-left: 1px solid #e5e7eb;
 }
 
-/* Publish tugmasi */
 .publish-wrapper {
   position: relative;
   display: flex;
@@ -132,7 +131,6 @@
 .rules { font-size: 14px; color: #6b7280; margin-bottom: 32px; text-align: center; }
 .rules span { color: #3b82f6; text-decoration: underline; cursor: pointer; }
 
-/* Sidebar cards */
 .sidebar-card {
   background: #f8fafc;
   border-radius: 20px;
@@ -262,7 +260,6 @@
 }
 
 
-/* Schedule Box Dizayni */
 .schedule-box {
   display: flex;
   flex-direction: column;
@@ -308,7 +305,6 @@
   margin-left: 8px;
 }
 
-/* Animatsiya silliq chiqishi uchun */
 .animate-slide-down {
   animation: slideDown 0.3s ease-out;
 }
@@ -318,7 +314,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* EditorJS plus tugmasini 100px chapga surish (Siz so'ragan qism) */
 .editorjs-holder {
   padding-left: 100px;
 }
@@ -330,7 +325,6 @@
   border-radius: 50% !important;
 }
 
-/* Sidebar card ichidagi kategoriyalar rasmga mos */
 .category-icon-bg {
   width: 48px;
   height: 48px;
