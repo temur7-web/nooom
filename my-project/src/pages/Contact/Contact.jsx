@@ -91,7 +91,6 @@ function Contact() {
       createdAt: new Date().toISOString(),
     };
 
-    // LocalStorage-ga saqlash
     let posts = JSON.parse(localStorage.getItem("posts")) || [];
     posts.unshift(post);
     localStorage.setItem("posts", JSON.stringify(posts));
@@ -100,7 +99,7 @@ function Contact() {
     setToastMessage(`Muvaffaqiyatli saqlandi! ✨`);
     setShowToast(true);
 
-    // To'g'ri tabga yo'naltirish
+ 
     setTimeout(() => {
       setShowToast(false);
       if (exitAfterSave) {
