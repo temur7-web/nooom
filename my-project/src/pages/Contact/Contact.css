@@ -92,6 +92,10 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+.ce-toolbar__plus {
+  margin-left: -100px;
+
+}
 .publish-main-btn:hover { background: #fde047; }
 
 .publish-dropdown-toggle {
