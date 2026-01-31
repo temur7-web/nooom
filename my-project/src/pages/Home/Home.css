@@ -3,16 +3,37 @@
   padding: 40px;
   display: flex;
   justify-content: center;
-}
 
+
+}
+/* Balandlikni auto qiling, shunda kontent siqilmaydi */
 .card {
   background: #fff;
   width: 100%;
   max-width: 1100px;
-  height: 300px;      
+  height: auto; /* 300px dan auto ga o'zgartirildi */
   border-radius: 20px;
   padding: 24px 28px;
-  overflow: hidden;   
+  margin-bottom: 20px; /* Pastdagi blok bilan masofa */
+}
+
+/* Page klassini markazlashtirish va tartiblash */
+.page {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column; /* Elementlar ketma-ket tushishi uchun */
+  align-items: center;
+  gap: 20px; /* Bloklar orasidagi masofa */
+}
+
+
+
+/* Media so'rovda ham heightni auto qilib qo'ying */
+@media (max-width: 1024px) {
+  .card, .cord {
+    width: 95%;
+    height: auto;
+  }
 }
 .cord2{
   width: 50px;
@@ -27,21 +48,21 @@ color: rgb(152, 142, 142);
 display: flex;
 justify-content: center;
 align-items: center;
-}
+}/* Pastdagi bo'sh karta (Empty card) */
 .cord {
   background: #fff;
-  width: 1000px;
-margin: auto;
-  height: 300px;       
+  width: 100%;
+  max-width: 1100px; /* Yuqoridagi karta bilan bir xil kenglik */
+  margin: 0 auto;
+  height: auto;
+  min-height: 250px;
   border-radius: 20px;
-  padding: 24px 28px;
-  overflow: hidden; 
+  padding: 40px;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
-  flex-direction: column; 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  flex-direction: column;
 }
 .mnb > h3{
   font-size: 25px;
@@ -187,4 +208,77 @@ select {
   padding: 8px 14px;
   border: 1px solid #e5e7eb;
   font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+  .page {
+    padding: 16px;
+  }
+
+  .card {
+    height: auto;           /* MUHIM */
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .share {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .earnings h1 {
+    font-size: 42px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* EMPTY CARD */
+  .cord {
+    width: 100%;            /* MUHIM */
+    height: auto;           /* MUHIM */
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .cord2 {
+    width: 44px;
+    height: 44px;
+  }
+
+  .icoo {
+    font-size: 32px;
+  }
+
+  .mnb h3 {
+    font-size: 18px;
+  }
+
+  .mnb p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+
+  .card {
+    height: auto;
+  }
+
+  .cord {
+    width: 90%;
+  }
 }

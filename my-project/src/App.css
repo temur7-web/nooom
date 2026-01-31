@@ -1,35 +1,44 @@
-.app {
-  display: flex;          /* 👈 MANA SHU ASOSIY */
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.content {
-  flex: 1;
-  background: #f3f4f6;
-}
-/* Layoutni moslashuvchan qilish */
 .layout {
-  display: flex;
+  display: flex; /* Sidebar va Kontentni yonma-yon qiladi */
   min-height: 100vh;
-  background: #f6f7f8;
+  width: 100%;
+  background-color: #f6f7f8;
+  overflow-x: hidden;
 }
 
-/* Telefonlar uchun Sidebar behavior */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  position: sticky; /* Sidebar qotib turadi */
+  top: 0;
+  background: #fff;
+  border-right: 1px solid #eee;
+  z-index: 100;
+}
+
+.main-content {
+  flex: 1; /* Sidebar-dan qolgan hamma joyni egallaydi */
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Flexbox qisqarishi uchun */
+}
+
+/* Telefon versiyasi uchun */
 @media (max-width: 768px) {
   .layout {
-    flex-direction: column; /* Sidebar tepaga yoki pastga o'tadi */
+    flex-direction: column; /* Ustma-ust tushadi */
   }
   .sidebar {
-    width: 100% !important;
-    height: auto !important;
-    padding: 10px 20px !important;
-    border-right: none !important;
-    border-bottom: 1px solid #eee;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    position: relative;
   }
-  .menu {
-    flex-direction: row !important;
-    justify-content: space-around;
-  }
-  .routs { display: none; } /* Telefonda faqat ikonka qoladi */
-  .content { padding: 15px !important; }
 }

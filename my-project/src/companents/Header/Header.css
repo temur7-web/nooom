@@ -150,3 +150,73 @@
   color: #777;
   font-size: 14px;
 }
+/* --- MEDIA QUERIES --- */
+
+/* Planshet va Telefonlar uchun */
+@media (max-width: 768px) {
+  /* Layoutni tepadan pastga yo'naltiramiz */
+  .layout {
+    flex-direction: column; 
+  }
+
+  /* Sidebarni tepaga yopishtirib, kengligini 100% qilamiz */
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo va Menu ikki chetga qochadi */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    margin-bottom: 0; /* Mobil versiyada pastki bo'shliq shart emas */
+  }
+
+  .logo img {
+    width: 50px; /* Logoni biroz kichraytiramiz */
+  }
+
+  /* Menuni yonma-yon holatga keltiramiz */
+  .menu {
+    flex-direction: row; 
+    gap: 15px;
+  }
+
+  .menu-item {
+    padding: 8px 12px;
+  }
+
+  .routs {
+    display: none; /* Kichik ekranlarda faqat ikonka qolsa chiroyli chiqadi */
+  }
+
+  /* Asosiy kontentning bo'shligini kamaytiramiz */
+  .content {
+    padding: 20px;
+  }
+
+  /* Cardlarni ekranga moslash */
+  .cards {
+    justify-content: center;
+  }
+
+  .earn-card {
+    width: 100%; /* Telefon ekranida kartalar to'liq kenglikda bo'ladi */
+  }
+}
+
+/* Juda kichik telefonlar uchun (375px gacha) */
+@media (max-width: 480px) {
+  .menu {
+    gap: 5px;
+  }
+  
+  .menu-item {
+    padding: 5px;
+  }
+}

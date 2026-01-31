@@ -13,25 +13,23 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="app">
+   <div className="layout"> {/* className="app" emas, "layout" bo'lishi shart */}
       <Header />
 
-      <div className="content">
-       <Routes>
-  <Route path="/" element={<Home />} />
-  {/* Yangi post uchun */}
-  <Route path="/contact" element={<Contact />} />
-  {/* Eskisini tahrirlash uchun ID bilan */}
-  <Route path="/contact/:id" element={<Contact />} />
+      <main className="main-content"> {/* className="content" emas, "main-content" */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/:id" element={<Contact />} />
 
-  <Route path="/about" element={<About />}>
-    <Route index element={<Pub />} />
-    <Route path="draf" element={<Darf />} />
-    <Route path="schet" element={<Schet />} />
-  </Route>
-</Routes>
+          <Route path="/about" element={<About />}>
+            <Route index element={<Pub />} />
+            <Route path="draf" element={<Darf />} />
+            <Route path="schet" element={<Schet />} />
+          </Route>
+        </Routes>
         <Banner />
-      </div>
+      </main>
     </div>
   );
 }

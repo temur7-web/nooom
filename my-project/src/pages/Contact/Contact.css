@@ -330,4 +330,90 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
+}/* --- CONTACT PAGE MEDIA QUERIES --- */
+
+@media (max-width: 1100px) {
+  .post-layout {
+    flex-direction: column; /* Sidebarni pastga tushiradi */
+  }
+
+  .editor-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-left: none;
+    border-top: 1px solid #e5e7eb;
+    padding: 32px 20px;
+  }
+
+  .post-page {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-input {
+    font-size: 32px; /* Sarlavha telefonda kichrayadi */
+    margin-bottom: 20px;
+  }
+
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .toolbar {
+    gap: 8px;
+    overflow-x: auto; /* Toollar sig'masa suriladi */
+    padding-bottom: 10px;
+  }
+
+  /* EditorJS paddingni telefonda kamaytiramiz */
+  .editorjs-holder {
+    padding-left: 0 !important;
+  }
+
+  /* Plus icon telefonda chetga chiqib ketmasligi uchun */
+  .ce-toolbar__plus {
+    left: 5px !important;
+    background: white !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .ce-toolbar__actions {
+    left: 0 !important;
+  }
+
+  /* Modalni markazlashtirish */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .publish-wrapper {
+    flex-direction: row; /* Tugmalar yonma-yon qolishi kerak */
+  }
+
+  .publish-main-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .publish-dropdown-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .sidebar-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+
+/* EditorJS ichidagi matnlarni telefonda o'qishga qulay qilish */
+.ce-block__content {
+  max-width: 100% !important;
 }
