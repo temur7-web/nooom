@@ -238,7 +238,6 @@ function Contact() {
         </div>
       )}
 
-      {/* TOAST XABARNOMASI */}
       {showToast && <div className="toast-notification">{toastMessage}</div>}
     </div>
   );
